@@ -2,6 +2,28 @@
 layout: archive
 ---
 
+<div class="author__info-grid">
+  <!-- <img class="author__image" style="grid-area: a; justify-self: center;" src="/assets/images/hooncho.png" alt="David Cho">
+  <b  style="grid-area: b; align-self: center;">{{ page.author }}</b> -->
+  <span style="grid-area: a;">
+    <i class="far fa-calendar" aria-hidden="true"></i>
+    <small>{{ page.date | date_to_string }}</small>
+  </span>
+  <span style="grid-area: b;"> | </span>
+  <span style="grid-area: c;">
+    <i class="far fa-clock" aria-hidden="true"></i>
+    <small>{% include read-time.html %}</small>
+  </span>
+</div>
+<hr>
+
+<div>
+  <i class="fas fa-tags" aria-hidden="true" style="margin-right: 5px; vertical-align: middle;"></i>
+  {% for tag in page.tags %}
+      <span class="page__tag">{{ tag }}</span>
+  {% endfor %}
+</div>
+
 {{ content }}
 
 <ul class="taxonomy__index">

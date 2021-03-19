@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "David Cho"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Turn **curiosity** into **learning**"
+  bio              : "**If you can't explain it simply, you don't understand it well enough.**<br/>-Albert Einstein-"
   location         : "Chemnitz, Germany"
   email            :
   links:
@@ -275,9 +275,18 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: posts
+      author: "David Cho"
       author_profile: true
       read_time: true
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: pages
+      # author_profile: true
+

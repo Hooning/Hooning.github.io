@@ -274,6 +274,28 @@ body {
   text-transform: uppercase;
 }
 
+.author__info-grid {
+  display: grid;
+  width: 280px;
+  font-size: 0.75em;
+  grid-auto-rows: 5px;
+  align-items: center;
+  grid-template-areas: 
+    "a a a b b b c c c c c"
+    "a a a b b b c c c c c";
+}
+
+.page__tag {
+  align-self: center;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 12%;
+  border: 1px solid darkgrey;
+  margin: 0 1px;
+  padding: 5.5px 10px;
+}
+
 /*
    Page meta
    ========================================================================== */
