@@ -276,13 +276,11 @@ body {
 
 .author__info-grid {
   display: grid;
-  width: 280px;
+  width: 250px;
   font-size: 0.75em;
   grid-auto-rows: 5px;
   align-items: center;
-  grid-template-areas: 
-    "a a a b b b c c c c c"
-    "a a a b b b c c c c c";
+  grid-template-areas: "a b c";
 }
 
 .page__tag {

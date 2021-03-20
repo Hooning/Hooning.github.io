@@ -7,8 +7,6 @@ tags: ['Basic', 'Test']
 summary: "This is the test post"
 permalink: "/test/:title.html"
 ---
-
-<br/>
 # Hello this is the test post
 
 ## index of posts

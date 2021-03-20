@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "David Cho"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/hooncho.png"
   bio              : "**If you can't explain it simply, you don't understand it well enough.**<br/>-Albert Einstein-"
   location         : "Chemnitz, Germany"
   email            :
@@ -117,6 +117,9 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hoon-cho-37201224/"
 
 # Site Footer
 footer:
@@ -277,9 +280,9 @@ defaults:
     values:
       layout: posts
       author: "David Cho"
-      author_profile: true
+      author_profile: false
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
   # _pages
@@ -288,5 +291,6 @@ defaults:
       type: pages
     values:
       layout: pages
+      autho: "David Cho"
       # author_profile: true
 
