@@ -6,6 +6,7 @@ categories: test template
 tags: ['Basic', 'Test']
 summary: "This is the test post"
 permalink: "/test/:title.html"
+published: false
 ---
 # Hello this is the test post
 
