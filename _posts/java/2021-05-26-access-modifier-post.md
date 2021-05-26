@@ -6,18 +6,18 @@ categories: basics
 tags: ['java', 'basics']
 summary: "What is Access Modifier in Java and how is it used"
 permalink: "/java/:title.html"
-published: false
+published: true
 ---
 
-# What? 
+# What is Access Modifiers? 
 
 Access modifiers are keywords that are generally used in Object-oriented programming languages to set the access scope of classes, fields, constructors, and methods.   
 
-# Why? 
+# Why do we need them? 
 
 It enables the concept of encapsulation, which binds the attribute and actions of the object so that it can hide the actual internal implementation. 
 
-# How? 
+# How is it used in Java? 
 
 In Java, there are four types of access modifiers which are public, private, protected, and default (no keyword). 
 
@@ -33,11 +33,10 @@ Above mentioned access levels can be shown in the following table.
 | private       |  Yes   |    No    |    No     |   No   |
 
 
-<br/>
 Let's have a look at example codes for each use case.
-<br/><br/>
+
 Here is an example of POJO (Plain Old Java Object) that describes Person.
-<br/><br/>
+
 
 ```java
 public class Person {
@@ -68,15 +67,11 @@ public class Person {
 }
 ```
 
-We have define the `class` as `public` access modifier so that it can be used in other part of the program. Here as a JavaBean standard I have defined all `fields` as `private` access modifier which can only accessed inside of Person class. However, we can access them by `public` getter and setter `methods`. 
+We have define the `class` as `public` access modifier so that it can be used in other part of the program. Here as a JavaBean standard I have defined all `fields` as `private` access modifier which can only accessed inside of `Person` class. However, we can access them by `public` getter and setter `methods`. 
 
-For constructors, it can be defined as all four types of access modifiers. If you don't define any constructors the compiler will automatically provide a `no-argument constructor` with `public` access modifier. However, if you want to access a no-argument Constructor from the `same class` then define the Constructor with a `private` access modifier. or to access classes from the `same package` you should explicitly define the Constructor with the `default(package-private)` modifier.
-
-<br/>
+For constructors, it can be defined as all four types of access modifiers. If you don't define any constructors the compiler will automatically provide a `no-argument constructor` with `public` access modifier. However, if you want to access a no-argument constructor from the **same class** then define the constructor with a `private` access modifier. or to access classes from the **same package** you should explicitly define the Constructor with the `default(package-private)` modifier.
 
 ### Case1: protected constructor
-<br/>
-
 ```java
 package package1;  
 
@@ -110,8 +105,7 @@ public class Sedan extends Vehicle {
   } 
 
   public static void main(String[] args) { 
-    Vehicle vehicle = new Sedan(4); 
-    System.out.println("Sedan wheel count: " + vehicle.getWheelCount()); 
+    Vehicle vehicle = new Sedan(4);
   } 
 
 } 
@@ -119,16 +113,7 @@ public class Sedan extends Vehicle {
 
 Here we defined `protected` constructor in `Vehicle(parent)` class and then defined `Sedan(sub)` Class. Even both classes are in different packages Sedan class can send the argument to the Vehicle constructor.
 
-Output: 
-```
-Sedan wheel count: 4
-```
-
-<br/>
-
 ### Case2: default constructor
-<br/>
-
 ```java
 package package1; 
 
@@ -157,8 +142,7 @@ package package1;
 public class Bus {  
 
   public static void main(String[] args) { 
-    Vehicle vehicle = new Vehicle(6); 
-    System.out.println("Bus wheel count: " + vehicle.getWheelCount()); 
+    Vehicle vehicle = new Vehicle(6);
   } 
 
 } 
@@ -166,16 +150,7 @@ public class Bus {
 
 Here we defined the `default(package-private)` constructor in the `Vehicle` class and used it to instantiate it from the `Bus` class which is in the same package.
 
-Output:
-```
-Bus wheel count: 6
-```
-
-<br/>
-
 ### Case3: private constructor (Singleton example)
-<br/>
-
 ```java
 package package1; 
 
@@ -212,8 +187,7 @@ public class Truck {
 
   public static void main(String[] args) {
     Vehicle vehicle = Vehicle.getInstance(); 
-    vehicle.setWheelCount(12); 
-    System.out.println("Truck wheel count: " + vehicle.getWheelCount()); 
+    vehicle.setWheelCount(12);
   } 
 
 } 
@@ -221,8 +195,4 @@ public class Truck {
 
 Here we defined a `private` constructor in the Vehicle class. In a normal case, it prevents being instantiated out of its class. However, the above example shows the common pattern of `Singleton`, where it uses the `public static factory method` that calls its own `private` constructor.
 
-Output:
-```
-Truck wheel count: 12
-```
 
