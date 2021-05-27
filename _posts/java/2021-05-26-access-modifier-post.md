@@ -1,7 +1,7 @@
 ---
 layout: posts
 date: 2021-05-26 23:30
-title: "[Java] Access Modifier"
+title: "[Java] Access Modifiers"
 categories: basics 
 tags: ['java', 'basics']
 summary: "What is Access Modifier in Java and how is it used"
@@ -9,19 +9,21 @@ permalink: "/java/:title.html"
 published: true
 ---
 
+![image-center](https://images.unsplash.com/photo-1621773734563-63e6004ed6a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)
+
 # What is Access Modifiers? 
 
-Access modifiers are keywords that are generally used in Object-oriented programming languages to set the access scope of classes, fields, constructors, and methods.   
+`Access modifiers` are keywords that are generally used in Object-oriented programming languages to set the access scope of `classes`, `fields`, `constructors`, and `methods`.   
 
 # Why do we need them? 
 
-It enables the concept of encapsulation, which binds the attribute and actions of the object so that it can hide the actual internal implementation. 
+It enables the concept of `encapsulation`, which binds the attribute and actions of the object so that it can hide the actual internal implementation. 
 
 # How is it used in Java? 
 
-In Java, there are four types of access modifiers which are public, private, protected, and default (no keyword). 
+In Java, there are four types of access modifiers which are `public`, `private`, `protected`, and `default` (no keyword). 
 
-Firstly, the public modifier enables its access from any level of the code. Secondly, a protected modifier allows access from the same package or child class from another package. Thirdly, in default (also called as package-private) modifier it only allows access from the same package. Lastly, the private modifier provides its access only inside of the same class. 
+Firstly, the `public` modifier enables its access from any level of the code. Secondly, a `protected` modifier allows access from the same package or child class from another package. Thirdly, in `default` (also called as package-private) modifier it only allows access from the same package. Lastly, the `private` modifier provides its access only inside of the same class. 
 
 Above mentioned access levels can be shown in the following table. 
 
@@ -35,7 +37,7 @@ Above mentioned access levels can be shown in the following table.
 
 Let's have a look at example codes for each use case.
 
-Here is an example of POJO (Plain Old Java Object) that describes Person.
+Here is an example of `POJO` (Plain Old Java Object) that describes Person.
 
 
 ```java
@@ -121,7 +123,7 @@ public class Vehicle {
 
   private int wheelCount; 
 
-  // [case2] No modifier(package-private) 
+  // no modifier(package-private) 
   Vehicle(int wheelCount) { 
     this.wheelCount = wheelCount; 
   } 
@@ -158,7 +160,7 @@ public class Vehicle {
 
   private int wheelCount;
 
-  // [case3] Singleton example
+  // singleton example
   private static final Vehicle uniqueInstance = new Vehicle(); 
 
   // private constructor
@@ -195,4 +197,11 @@ public class Truck {
 
 Here we defined a `private` constructor in the Vehicle class. In a normal case, it prevents being instantiated out of its class. However, the above example shows the common pattern of `Singleton`, where it uses the `public static factory method` that calls its own `private` constructor.
 
+## Conclusion
+
+Lastly, I want to point out few things to consider while defining access modifiers. 
+
+In the case of classes, only `public` or `default` access modifiers can be used. However, in fields or methods, any type of access modifiers are usable. Anyways, if there are no special reasons for defining it as public, I suggest you define the access modifier as restrictive as possible.
+
+Also in the `inheritance` of class, the access modifier of the overriding method (sub-class) must not be more restrictive than it is defined in the overridden method (parent-class).
 
