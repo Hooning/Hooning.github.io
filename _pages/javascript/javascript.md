@@ -1,13 +1,14 @@
 ---
 layout: "pages"
-title: "Posts related to Java"
-permalink: /java/
+title: "Posts related to Javascript"
+permalink: /javascript/
 ---
 
-## Java Basics
+## Angular Basics
+
 <ul>
   {% for post in site.posts %}
-    {% if post.tags[0] == "java" and post.tags[1] == "basics" %}
+    {% if post.tags[0] == "javascript" and post.tags[1] == "basics" %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
