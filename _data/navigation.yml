@@ -1,19 +1,16 @@
 # main links
 main:
-  - title: "About"
-    url: /about
-    descrition: About myself
-  - title: "Java"
-    url: /java
-    descrition: What I learned in Java Programming
-  - title: "Angular"
-    url: /angular
-    descrition: All about Angular Framework and related libraries
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    - title: "About"
+      url: /about
+      descrition: About myself
+    - title: "Javascript"
+      url: /javascript
+      descrition: All about javascript
+    # - title: "Quick-Start Guide"
+    #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    # - title: "About"
+    #   url: https://mmistakes.github.io/minimal-mistakes/about/
+    # - title: "Sample Collections"
+    #   url: /collection-archive/
+    # - title: "Sitemap"
+    #   url: /sitemap/
