@@ -4,7 +4,7 @@ title: "Posts related to Javascript"
 permalink: /javascript/
 ---
 
-## Angular Basics
+## Javascript Basics
 
 <ul>
   {% for post in site.posts %}
